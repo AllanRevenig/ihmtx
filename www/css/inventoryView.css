@@ -1,0 +1,14 @@
+
+.sbux-subheader-layout{
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+.sbux-card-data-view{
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.sbux-content div{
+	display: inline-block;
+}

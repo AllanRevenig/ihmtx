@@ -1,0 +1,32 @@
+
+.sbux-color-red { /*45%-darker*/
+	background-color: #E60000;
+	/*color: white;*/
+}
+.sbux-color-green { /*25%-green*/
+	background-color: #008000;
+	/*color: white;*/
+}
+.sbux-color-yellow { /*50%-yellow*/
+	background-color: #FFFF00;
+	/*color: black;*/
+}
+.sbux-color-white { /*100%*//*white*/
+	background-color: #FFFFFF;	
+	/*color: black;*/
+}
+.sbux-color-nearwhite { /*97%*/
+	background-color: #F8F8F8
+}
+.sbux-color-whitesmoke { /*96%*//*whitesmoke*/
+	background-color: #F5F5F5
+}
+.sbux-color-ashwhite { /*95%*/
+	background-color: #F2F2F2
+}
+.sbux-text-black {
+	color: black;
+}
+.sbux-text-white {
+	color: white;
+}

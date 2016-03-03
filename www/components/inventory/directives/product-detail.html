@@ -1,0 +1,79 @@
+<div class="detail-pane" id="detailPane">
+
+	<header class="detail-pane-header" ng-class="barTrim(product)">
+		<span class="fa fa-angle-left fa-3x detail-pane-dismiss" ng-class="textTrim(product)" ng-click="returnToCards()"></span>
+		<span class="detail-pane-productName" ng-class="textTrim(product)">{{product.item_name}}</span>
+	</header>
+
+	<section class="action-pane">
+
+		<form name="actionForm" ng-submit="executeAction(actionForm.$valid)" novalidate>
+
+				<div>
+
+					<label class="item item-input action-input" for="actionSelect">
+						<span class="input-label action-input-label">Select an Action:</span>
+						<select class="action-input-text" name="actionSelect"
+									ng-model="actions.selectedOption" required>
+								<option ng-repeat="option in actions.actionOptions track by option.id"
+										value="{{option.id}}">{{option.name}}</option>
+						</select>
+					</label>
+
+					<label class="item item-input action-input" for="comments">
+						<span class="input-label action-input-label">Comments:</span>
+						<textarea class="action-input-textbox" name="comments"
+										rows="3" cols="30" ng-minlength="2" ng-maxlength="200"
+										ng-model="actions.actionComments">
+								Provide additional supporting information
+						</textarea>
+					</label>
+					
+				</div>
+
+				<div class="action-form-errors">
+					<p ng-show="!actionForm.actionSelect.$pristine && actionForm.actionSelect.$invalid"
+						class="help-block error-message">
+						<i class="ion-information-circled"></i>
+						Please select an Action.
+					</p>
+					<p ng-show="actionForm.comments.$error.minlength"
+						class="help-block error-message">
+						<i class="ion-information-circled"></i>
+						Comments, if provided, must exceed 1 character.
+					</p>
+					<p ng-show="actionForm.comments.$error.maxlength"
+						class="help-block error-message">
+						<i class="ion-information-circled"></i>
+						Comments exceeded 200 character maximum.
+					</p>
+				</div>
+
+				<div class="padding color-whitesmoke action-submit-button">
+					<button angular-ripple
+								class="button button-small button-right text-right sbux-color-white"
+								ng-disabled="actionForm.$invalid">
+						Submit
+					</button>
+				</div>
+
+		</form>
+
+	</section>
+
+	<section class="detail-pane-info">
+		<ul>
+				<li class="detail-prop"><span class="detail-key">Expiration:</span><span class="detail-value">{{product.expiry_dt | date:'longDate'}}</span><li/>
+				<li class="detail-prop"><span class="detail-key">Quantity On Hand:</span><span class="detail-value">{{product.lot_qty}}</span><li/>
+				<li class="detail-prop"><span class="detail-key">Item#:</span><span class="detail-value">{{product.item}}</span><li/>
+				<li class="detail-prop"><span class="detail-key">Lot#:</span><span class="detail-value">{{product.lot_num}}</span><li/>
+				<li class="detail-prop"><span class="detail-key">SubInv:</span><span class="detail-value">{{product.subinv}}</span></li>
+				<li class="detail-prop"><span class="detail-key">Org:</span><span class="detail-value">{{product.org}}</span></li>
+				<li class="detail-prop-separator"></li>
+				<li class="detail-prop" ng-repeat="(key, value) in filteredProduct(product)">
+					<span class="detail-key">{{key}}:</span><span class="detail-value">{{value}}</span>
+				</li>
+		</ul>
+	</section>
+
+</div>

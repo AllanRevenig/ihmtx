@@ -1,0 +1,133 @@
+
+/*--- DETAIL PANEL ------------------*/
+
+.detail-pane {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	height: 700px;
+	width: 450px;
+	max-width: 450px;
+	position: absolute;
+	/*position: fixed;*/
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	box-shadow: -2px -2px 3px rgba(0,0,0,0.3);
+}
+
+.detail-pane-header {
+	margin: 0;
+	padding: 0;
+}
+
+.detail-pane-dismiss {
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+.detail-pane-productName {
+	position: absolute;
+	padding-left: 0.3em;
+	line-height: 2.7em;
+	font-size: 1.2em;
+}
+
+/*--- ACTION PANEL FORM -------------*/
+
+.action-pane {
+	background-color: whitesmoke;
+	margin: 0.5em;
+	padding: 0.8em;
+	height: 190px;
+	width: 437px;
+	border-radius: 4px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+.action-input {
+	padding-left: 0.75em;
+}
+
+.action-input-label {
+	width: 10.4em;
+	font-size: 0.8em;  
+	font-weight: bold;  
+}
+
+.action-input-text {
+	width: 14.0em;
+	max-width: 18.5em;
+}
+
+.action-input-textbox {
+	padding-right: 0;
+	height: 60px;
+	max-width: 18.5em;
+	resize: none;
+	color: #737373;
+	border: 1px solid #b3b3b3;
+}
+
+.action-submit-button {
+	margin: 1em 0;
+	padding: 0;
+	float: right;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.action-form-errors {
+	float: left;
+	width: 330px;
+	max-width: 330px;
+	line-height: 1em;
+}
+.error-message {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	margin-right: 0;
+	max-width: 100%;
+	color: red;
+}
+
+
+/*--- INFO PANEL --------------------*/
+
+.detail-pane-info {
+	margin: 0.5em;
+	height: 65%;
+	/*ion-scroll*/
+	/*overflow-y: scroll;*/
+	overflow-y: auto;
+}
+
+.detail-prop {
+	background-color: whitesmoke;
+	margin: 0.2em;
+	padding: 0.15em;
+	padding-left: 0.3em;
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.detail-prop-separator {
+	background-color: white;
+	margin: 0.4em 0.2em 0.2em 0.2em;
+	padding: 0.15em;
+	padding-left: 0.3em;
+	line-height: 0.2em;
+}
+
+.detail-key {
+	padding-left: 0.5em;
+	font-weight: 500;
+	color: rgba(0,0,0,1);
+}
+
+.detail-value {
+	padding-right: 1.0em;
+	float: right;
+	font-weight: 600;
+	color: black;
+}

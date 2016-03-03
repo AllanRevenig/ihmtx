@@ -1,0 +1,25 @@
+
+.sbux-risk-color{
+	margin-right: 1rem;
+}
+
+.row {
+	display: flex;	
+}
+
+.sbux-card-layout{
+	display:inline-block;
+	width: 20rem;
+}
+
+.sbux-red-trim{
+	background-color: #ff0000;
+}
+
+.sbux-yellow-trim{
+	background-color: #ffff00;
+}
+
+.sbux-green-trim{
+	background-color: #008000;
+}

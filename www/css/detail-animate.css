@@ -1,0 +1,41 @@
+
+/* [1s 0.5s, etc (or all)] [linear or ease] [+/- 100%] */
+.toggle {
+	transition: ease 0.5s;
+	-webkit-transition: ease 0.5s;
+	-moz-transition: ease 0.5s;
+	-ms-transition: ease 0.5s;
+	-o-transition: ease 0.5s;
+}
+.toggle.ng-enter {
+	opacity: 0;
+	transform:translateX(100%);
+	-webkit-transform:translateX(100%);
+	-moz-transform:translateX(100%);
+	-ms-transform:translateX(100%);
+	-o-transform:translateX(100%);
+}
+.toggle.ng-enter-active {
+	opacity: 1;
+	transform:translateX(0);
+	-webkit-transform:translateX(0);
+	-moz-transform:translateX(0);
+	-ms-transform:translateX(0);
+	-o-transform:translateX(0);
+}
+.toggle.ng-leave {
+	opacity: 1;
+	transform:translateX(0);
+	-webkit-transform:translateX(0);
+	-moz-transform:translateX(0);
+	-ms-transform:translateX(0);
+	-o-transform:translateX(0);
+}
+.toggle.ng-leave-active {
+	opacity: 0;
+	transform:translateX(100%);
+	-webkit-transform:translateX(100%);
+	-moz-transform:translateX(100%);
+	-ms-transform:translateX(100%);
+	-o-transform:translateX(100%);
+}
