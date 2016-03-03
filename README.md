@@ -1,3 +1,3 @@
 # ihmtx
 
-journey project - Allan
+Mobile Web Development Journey Project
